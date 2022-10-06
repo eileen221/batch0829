@@ -9,7 +9,6 @@ export const INIT_TODOS = 'INIT';
 export const initTodos = (dispatch) => async () => {
   try {
     const result = await todoApi.getAllTodos();
-    console.log(result);
     dispatch({
       type: INIT_TODOS,
       payload: result,
